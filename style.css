@@ -36,6 +36,29 @@ body {
     height: 60px;
 }
 
+.navBar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navBarUser {
+    height: 40px;
+    width: 40px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 50%;
+
+}
+
+.navBarUser img {
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    position: relative;
+
+    transform: translateX(-50%) translateY(-50%);
+}
+
 .content {
     padding-top: 100px;
 }
