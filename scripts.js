@@ -1,5 +1,7 @@
 
 
+
+
 function aa() {
 
     items = [
@@ -33,6 +35,7 @@ async function submit() {
         
         console.log(u);
 
+        const users = document.getElementById("users");
         users.innerHTML="";
 
         for(var i of u) {
@@ -44,4 +47,25 @@ async function submit() {
     });
 
     
+}
+
+async function getByID(event) {
+    console.log("aa");
+
+    const id = document.getElementById("lookupID").value;
+
+    const res = await fetch(`http://localhost:4005/users/` + id);
+ 
+    res.json().then(u => {
+        
+        const users = document.getElementById("users");
+        users.innerHTML="";
+
+        users.innerHTML += 
+        `
+        <div class="userInfo"><span>${ u.firstName }</span> (${ u.age }${ u.sex }).</div>
+        `;
+
+        console.log(u);
+    });
 }

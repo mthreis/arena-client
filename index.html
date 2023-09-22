@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detran</title>
+    <title>ARENA POPULAR</title>
     <link rel="icon" href="img/arena100.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,8 +28,12 @@
     </div>
 
     <div class="content">
-        <p id="users">No user found.</p>
-        <button onclick="submit()">Refresh</button>
+        <p id="users">No users found.</p>
+        <button onclick="submit()">Get All</button>
+
+        <input id="lookupID" type="number" value="1"/>
+        <button onclick="getByID()">Get by ID</button>
+
         <div class="space"></div>
     </div>
 
